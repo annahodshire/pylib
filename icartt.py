@@ -220,7 +220,7 @@ def write_icartt(filename, df, **kwargs):
                     nc.extend( list(v) )
                 else:    
                     nc.append( '{:s}: {:s}'.format(kn,v) )
-            nc.append( ','.join(ictvars)) # Also add list of variable names
+            nc.append( ', '.join(ictvars)) # Also add list of variable names. ALH: add space after comma to make compatible with NASA checker
             header.append( str(len(nc)) )
             header.extend( nc )
         else:
